@@ -1,0 +1,6 @@
+[init]
+    defaultBranch = main
+[alias]
+    graph = log --graph --decorate --all --oneline --abbrev-commit
+[pager]
+    diff = diff-highlight | less

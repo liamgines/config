@@ -1,3 +1,7 @@
+if has('win32')
+    set guifont=Consolas:h12
+endif
+
 set noswapfile
 set ttimeoutlen=0
 

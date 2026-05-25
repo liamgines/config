@@ -30,6 +30,7 @@ augroup END
 
 runtime macros/matchit.vim
 packadd fileswitch
+packadd lsp
 
 syntax on
 set background=dark

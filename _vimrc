@@ -65,3 +65,10 @@ call s:HighlightAdd('EndOfBuffer', '#1E1E1E', 'NONE')
 call s:HighlightAdd('Pmenu', '#FAFAFA', '#2E2E2E')
 call s:HighlightAdd('PmenuSel', '#FAFAFA', '#424242')
 call s:HighlightAdd('Terminal', '#FAFAFA', '#282828')
+
+" https://stackoverflow.com/a/43001535
+augroup python
+    autocmd!
+    autocmd FileType python syntax region pythonDocString start=+^\s*"""+ end=+"""+ keepend contains=...
+    autocmd FileType python highlight link pythonDocString Comment
+augroup END

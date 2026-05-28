@@ -32,6 +32,7 @@ runtime macros/matchit.vim
 packadd fileswitch
 packadd lsp
 call LspOptionsSet(#{ autoComplete: v:false, omniComplete: v:false, semanticHighlight: v:false, showInlayHints: v:false, showSignature: v:true })
+call LspAddServer([#{name: 'pyright', filetype: 'python', path: 'pyright-langserver', args: ['--stdio'], workspaceConfig: #{ python: #{ pythonPath: 'py' }} }])
 
 syntax on
 set background=dark

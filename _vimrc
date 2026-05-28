@@ -31,6 +31,7 @@ augroup END
 runtime macros/matchit.vim
 packadd fileswitch
 packadd lsp
+call LspOptionsSet(#{ autoComplete: v:false, omniComplete: v:false, semanticHighlight: v:false, showInlayHints: v:false, showSignature: v:true })
 
 syntax on
 set background=dark

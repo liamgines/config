@@ -33,6 +33,7 @@ packadd fileswitch
 packadd lsp
 call LspOptionsSet(#{ autoComplete: v:false, omniComplete: v:false, semanticHighlight: v:false, showInlayHints: v:false, showSignature: v:true })
 call LspAddServer([#{name: 'pyright', filetype: 'python', path: 'pyright-langserver', args: ['--stdio'], workspaceConfig: #{ python: #{ pythonPath: 'py' }} }])
+call LspAddServer([#{name: 'clangd', filetype: ['c', 'cpp'], path: 'clangd', args: ['--background-index', '--clang-tidy'] }])
 
 syntax on
 set background=dark
